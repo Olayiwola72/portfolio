@@ -1,0 +1,93 @@
+.experience-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    h2 {
+        font-size: 36px;
+        color: #24c7ff;
+        text-align: left;
+        margin-bottom: 40px;
+        position: relative;
+    }
+  }
+  
+  .experience-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .experience-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 calc(50% - 20px); /* Responsive width: 50% minus the gap */
+    max-width: 48%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .experience-card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #000;
+  }
+  
+  .experience-card h4 {
+    font-size: 18px;
+    color: #000;
+  }
+  
+  .experience-card p, .experience-card ul {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .experience-card ul{
+    margin: 20px 0 10px 20px; /* Adjust these values to ensure visibility */
+    padding-left: 20px;
+  }
+  
+  .experience-card ul li {
+    list-style-type: disc; /* Bullet points */
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555; /* Matches the text color in the previous CSS */
+  }
+  
+  
+  /* Media Queries for Responsiveness */
+  
+  @media (max-width: 768px) {
+    .experience-card {
+      flex: 1 1 100%; /* Full width on smaller screens */
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .experience-section h2 {
+      font-size: 28px; /* Smaller heading for small screens */
+    }
+  
+    .experience-card h3 {
+      font-size: 20px;
+    }
+  
+    .experience-card h4 {
+      font-size: 16px;
+    }
+  
+    .experience-card p,
+    .experience-card ul {
+      font-size: 14px; /* Smaller text for readability on small screens */
+    }
+}

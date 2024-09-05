@@ -1,0 +1,32 @@
+#back-to-top-button {
+    display: inline-block;
+    background-color: $themeClrPrimary;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+  
+    .lets-icons--arrow-top {
+      display: inline-block;
+      width: 4rem;
+      height: 4rem;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='m12 4l-.707-.707l.707-.707l.707.707zm1 15a1 1 0 1 1-2 0zM5.293 9.293l6-6l1.414 1.414l-6 6zm7.414-6l6 6l-1.414 1.414l-6-6zM13 4v15h-2V4z'/%3E%3C/svg%3E");
+    }
+  
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-5px);
+    }
+  
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+}
