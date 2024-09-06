@@ -45,6 +45,7 @@ To set up the project locally:
 
       ```sh 
       npm install
+      ```
 
 1. **Listen to changes in CSS Preprocessor files (SASS files):**
 
@@ -52,6 +53,7 @@ To set up the project locally:
 
       ```sh
       npm run compile:scss
+      ```
 
     Once you run `npm run compile:scss`, then open the `index.html` inside your favorite browser or using the live server extension.
 
@@ -61,6 +63,7 @@ To set up the project locally:
 
       ```sh
       npm start
+      ```
   
   Once you run `npm start`, your application will be served at http://localhost:8080/
 
@@ -72,11 +75,13 @@ Styles
 
     ```sh 
     npm run compile:scss
+    ```
 
 1. **If you wish to leverage live-server, make sure that live-server is running:**
 
     ```sh
     npm start
+    ```
 
 1. **Change the color theme of the website:**
 
