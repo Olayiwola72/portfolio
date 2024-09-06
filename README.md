@@ -63,7 +63,6 @@ $ git remote remove origin
   
   Once you run `npm start`, your application will be served at http://localhost:8080/
 
-<br />
 
 ## **Usage Instructions**
 Styles
@@ -91,7 +90,6 @@ Styles
 
     **Note**: I highly recommend to checkout the [Dopefolio Playground Link](https://dopefolio-playground.netlify.app) to test the template with different colors and see which color do you like the most.
 
-<br />
 
 ## **📦 Deployment**
 
@@ -109,6 +107,8 @@ Once you press the **Create Site Button** then you will have to follow the 3 ste
 
 3. In the 3rd step, you will have to modify the **Site settings and deploy**, keep everything as it is but just make sure to modify the **Build command** and set its value to **npm run build** and then modify the **Publish directory** and set its value to **/** as shown in the  **image** below
 
+<br />
+
 <div align="center">
   <img src="https://i.ibb.co/hDTTrPB/Set-Build-Command-to.png" alt="Dopefolio Build Command Example and Publish Directory Value" width="100%" />
   <br>
@@ -116,7 +116,6 @@ Once you press the **Create Site Button** then you will have to follow the 3 ste
 
 Then hit the **Deploy site** button and your **Portfolio Site** is live 🥳
 
-<br />
 
 ## **Docker Support**
 This application can be deployed using Docker and Docker Compose, which simplifies the process of setting up and running the application in a containerized environment. Follow these instructions to get the application running using Docker.
@@ -148,20 +147,13 @@ This application can be deployed using Docker and Docker Compose, which simplifi
 
   Once the container is up, your application will be served at [http://localhost:8080/](http://localhost:8080/)
    
-<br />
-
 ## **Contributing**
 Contributions to this project are welcome. Please follow the standard GitHub fork, branch, and pull request workflow. Feel free to raise issues or feature requests to enhance this project.
-
-<br />
 
 ## **📈 GitHub Stats**
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Olayiwola72&layout=compact)](https://github.com/Olayiwola72)
 
 ## **🤝 Connect With Me**
-
-<br/>
-
 <a href="https://www.linkedin.com/in/olayiwola-akinnagbe-371686172/" target="_blank">
    <img 
       align="left" 
@@ -189,8 +181,7 @@ Contributions to this project are welcome. Please follow the standard GitHub for
    />
 </a>
 
-<br>
-
+<br />
 - 💬 If you have any questions or feedback, feel free to reach out! I'm also actively seeking exciting job opportunities that align with my skills and experience, so don't hesitate to contact me if you know of any suitable roles
 
 ## **📄 License**
