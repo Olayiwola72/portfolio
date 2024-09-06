@@ -68,28 +68,28 @@ $ git remote remove origin
 ## **Usage Instructions**
 Styles
 
-1. **Make sure you have started the SASS to CSS compilation by running**
+1. **Make sure you have started the SASS to CSS compilation by running:**
 
-```bash
- npm run compile:scss
-```
+    ```sh 
+    npm run compile:scss
 
-2. **If you wish to leverage live-server, make sure that live-server is running**
+1. **If you wish to leverage live-server, make sure that live-server is running:**
 
-```bash
- npm start
-```
+    ```sh
+    npm start
 
-3. **Change the color theme of the website.**
+1. **Change the color theme of the website:**
 
-  Go to `sass/abstracts/_variables.scss` and change the value of this sass variable called `$themeClrPrimary` to your preferred HEX color.
+    Go to `sass/abstracts/_variables.scss` and change the value of this sass variable called `$themeClrPrimary` to your preferred HEX color.
 
-  ```scss
-  // Default value
-  $themeClrPrimary: #0062b9;
-  ```
+      ```scss
+      // Default value
+      $themeClrPrimary: #0062b9;
+      ```
+  
+    Once you run `npm start`, your application will be served at [http://localhost:8080/](http://localhost:8080/)
 
-**Note**: I highly recommend to checkout the [Dopefolio Playground Link](https://dopefolio-playground.netlify.app) to test the template with different colors and see which color do you like the most.
+    **Note**: I highly recommend to checkout the [Dopefolio Playground Link](https://dopefolio-playground.netlify.app) to test the template with different colors and see which color do you like the most.
 
 
 ## **📦 Deployment**
@@ -143,7 +143,7 @@ This application can be deployed using Docker and Docker Compose, which simplifi
 
    --build forces Docker Compose to rebuild the images. You can omit this flag if you don't need to rebuild.
 
-  Once the container is up, your application will be served at http://localhost:8080/
+  Once the container is up, your application will be served at [http://localhost:8080/](http://localhost:8080/)
    
 
 ## **Contributing**
