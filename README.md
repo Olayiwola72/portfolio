@@ -65,7 +65,7 @@ To set up the project locally:
       npm start
       ```
   
-  Once you run `npm start`, your application will be served at [http://localhost:8080/](http://localhost:8080/)
+   Once you run `npm start`, your application will be served at [http://localhost:8080/](http://localhost:8080/)
 
 
 ## **Usage Instructions**
