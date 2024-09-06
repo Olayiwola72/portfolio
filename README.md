@@ -20,7 +20,7 @@
 - **![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&color=F7DF1E)**
 - **![](https://img.shields.io/badge/Tools-FormSpree-informational?style=flat&logo=FormSpree&color=61DAFB)**
 - **![](https://img.shields.io/badge/Tools-Docker-informational?style=flat&logo=Docker&color=CB3837)**
-- **Node v16**
+- **Node v16 🚀**
 
 ## **🔧 Getting Started**
 To set up the project locally:
@@ -63,32 +63,33 @@ $ git remote remove origin
   
   Once you run `npm start`, your application will be served at http://localhost:8080/
 
+<br />
 
 ## **Usage Instructions**
 Styles
 
 1. **Make sure you have started the SASS to CSS compilation by running**
 
-```bash
- npm run compile:scss
-```
+  ```sh
+  npm run compile:scss
 
 1. **If you wish to leverage live-server, make sure that live-server is running**
 
-```bash
- npm start
-```
+  ```sh
+  npm start
 
 1. **Change the color theme of the website.**
 
-Go to `sass/abstracts/_variables.scss` and change the value of this sass variable called `$themeClrPrimary` to your preferred HEX color.
+  Go to `sass/abstracts/_variables.scss` and change the value of this sass variable called `$themeClrPrimary` to your preferred HEX color.
 
-```scss
-// Default value
-$themeClrPrimary: #0062b9;
-```
+  ```scss
+  // Default value
+  $themeClrPrimary: #0062b9;
+  ```
 
-**NOTE**: I highly recommend to checkout the [Dopefolio Playground Link](https://dopefolio-playground.netlify.app) to test the template with different colors and see which color do you like the most.
+  **Note**: I highly recommend to checkout the [Dopefolio Playground Link](https://dopefolio-playground.netlify.app) to test the template with different colors and see which color do you like the most.
+
+<br />
 
 ## **📦 Deployment**
 
