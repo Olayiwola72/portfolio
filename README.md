@@ -27,15 +27,16 @@ To set up the project locally:
 
 1. **Clone the Repository:**
 
-  ```bash
-  # Clone this repository
-  $ git clone https://github.com/Olayiwola72/portfolio
+  ```sh 
+  git clone https://github.com/Olayiwola72/portfolio
+  ```
 
-  # Go into the repository
-  $ cd portfolio
+  ```sh 
+  cd portfolio
+  ```
 
-  # Remove current origin repository
-  $ git remote remove origin
+  ```sh 
+  git remote remove origin
   ```
 
 1. **Install Dependencies:**
