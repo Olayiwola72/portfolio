@@ -20,7 +20,7 @@
 - **![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&color=F7DF1E)**
 - **![](https://img.shields.io/badge/Code-FormSpree-informational?style=flat&logo=FormSpree&color=61DAFB)**
 - **![](https://img.shields.io/badge/Tools-Docker-informational?style=flat&logo=Docker&color=CB3837)**
-
+- **![]Node v16**
 
 ## **🔧 Getting Started**
 To set up the project locally:
