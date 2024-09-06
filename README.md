@@ -6,7 +6,7 @@
 - [Tech Stack](#-tech-stack)
 - [Getting Started](#-getting-started)
 - [Usage Instructions](#usage-instructions)
-- [API Documentation](#-api-documentation)
+- [Features](#features)
 - [Deployment](#-deployment)
 - [Docker Support](#docker-support)
 - [Contributing](#contributing)
@@ -96,6 +96,16 @@ Styles
 
     **Note**: I highly recommend to checkout the [Dopefolio Playground Link](https://dopefolio-playground.netlify.app) to test the template with different colors and see which color do you like the most.
 
+## **Features**
+
+- **Easy to Setup 💯**
+- **Free to Use (OpenSource) 🥳**
+- **No Additional Frameworks 🤘**
+- **No Additional Libraries 🙌**
+- **Multi Page 💎**
+- **Fully Responsive 🚀**
+- **Super Fast and Optimized for SEO ⚡**
+- **Great Audits Score 🎖️**
 
 ## **📦 Deployment**
 
