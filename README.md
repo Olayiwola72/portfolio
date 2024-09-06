@@ -82,12 +82,12 @@ Styles
 
 3. **Change the color theme of the website.**
 
-Go to `sass/abstracts/_variables.scss` and change the value of this sass variable called `$themeClrPrimary` to your preferred HEX color.
+  Go to `sass/abstracts/_variables.scss` and change the value of this sass variable called `$themeClrPrimary` to your preferred HEX color.
 
-```scss
-// Default value
-$themeClrPrimary: #0062b9;
-```
+  ```scss
+  // Default value
+  $themeClrPrimary: #0062b9;
+  ```
 
 **Note**: I highly recommend to checkout the [Dopefolio Playground Link](https://dopefolio-playground.netlify.app) to test the template with different colors and see which color do you like the most.
 
