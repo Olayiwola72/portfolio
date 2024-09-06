@@ -189,7 +189,9 @@ Contributions to this project are welcome. Please follow the standard GitHub for
 
 <br />
 <br />
-<p style="text-align: justify"></p>
+<p style="text-align: justify">
+  - 💬 If you have any questions or feedback, feel free to reach out! I'm also actively seeking exciting job opportunities that align with my skills and experience, so don't hesitate to contact me if you know of any suitable roles
+</p>
 
 ## **📄 License**
 
