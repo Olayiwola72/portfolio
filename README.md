@@ -1,6 +1,6 @@
 ## **Professional Multipage Developer Portfolio 🚀**
 
-## **[Demo Link](https://olayiwola-akinnagbe.netlify.app) 🔗**
+## **[https://olayiwola-akinnagbe.netlify.app](https://olayiwola-akinnagbe.netlify.app) 🔗**
 
 ## **🔭 Table of Contents**
 - [Tech Stack](#-tech-stack)
@@ -18,9 +18,9 @@
 - **![](https://img.shields.io/badge/Style-CSS3-informational?style=flat&logo=CSS3&color=1572B6)**
 - **![](https://img.shields.io/badge/Style-SAAS-informational?style=flat&logo=SASS&color=7952B3)**
 - **![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&color=F7DF1E)**
-- **![](https://img.shields.io/badge/Code-FormSpree-informational?style=flat&logo=FormSpree&color=61DAFB)**
+- **![](https://img.shields.io/badge/Tools-FormSpree-informational?style=flat&logo=FormSpree&color=61DAFB)**
 - **![](https://img.shields.io/badge/Tools-Docker-informational?style=flat&logo=Docker&color=CB3837)**
-- **![]Node v16**
+- **Node v16**
 
 ## **🔧 Getting Started**
 To set up the project locally:
@@ -52,7 +52,7 @@ $ git remote remove origin
       ```sh
       npm run compile:scss
 
-  Once you run `npm run compile:scss`, then open the `index.html` inside your favorite browser or using the live server extension.
+    Once you run `npm run compile:scss`, then open the `index.html` inside your favorite browser or using the live server extension.
 
 1. **Using the live-server extension:**
 
@@ -70,13 +70,13 @@ Styles
 1. **Make sure you have started the SASS to CSS compilation by running**
 
 ```bash
-$ npm run compile:scss
+ npm run compile:scss
 ```
 
 1. **If you wish to leverage live-server, make sure that live-server is running**
 
 ```bash
-$ npm start
+ npm start
 ```
 
 1. **Change the color theme of the website.**
@@ -116,9 +116,13 @@ Then hit the **Deploy site** button and your **Portfolio Site** is live 🥳
 ## **Docker Support**
 This application can be deployed using Docker and Docker Compose, which simplifies the process of setting up and running the application in a containerized environment. Follow these instructions to get the application running using Docker.
 
+<br />
+
 🛠 Prerequisites
 - **Docker: Install Docker**
 - **Docker Compose: Install Docker Compose**
+
+<br />
 
 🚀 Quick Start
 1. **Clone the Repository:**
@@ -148,6 +152,8 @@ Contributions to this project are welcome. Please follow the standard GitHub for
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Olayiwola72&layout=compact)](https://github.com/Olayiwola72)
 
 ## **🤝 Connect With Me**
+
+<br/>
 
 <a href="https://www.linkedin.com/in/olayiwola-akinnagbe-371686172/" target="_blank">
    <img 
@@ -179,7 +185,6 @@ Contributions to this project are welcome. Please follow the standard GitHub for
 <br>
 
 - 💬 If you have any questions or feedback, feel free to reach out! I'm also actively seeking exciting job opportunities that align with my skills and experience, so don't hesitate to contact me if you know of any suitable roles
-<br>
 
 ## **📄 License**
 
