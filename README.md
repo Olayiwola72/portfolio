@@ -91,6 +91,7 @@ Styles
 
     **Note**: I highly recommend to checkout the [Dopefolio Playground Link](https://dopefolio-playground.netlify.app) to test the template with different colors and see which color do you like the most.
 
+<br />
 
 ## **📦 Deployment**
 
@@ -114,6 +115,8 @@ Once you press the **Create Site Button** then you will have to follow the 3 ste
 </div>
 
 Then hit the **Deploy site** button and your **Portfolio Site** is live 🥳
+
+<br />
 
 ## **Docker Support**
 This application can be deployed using Docker and Docker Compose, which simplifies the process of setting up and running the application in a containerized environment. Follow these instructions to get the application running using Docker.
@@ -145,12 +148,14 @@ This application can be deployed using Docker and Docker Compose, which simplifi
 
   Once the container is up, your application will be served at [http://localhost:8080/](http://localhost:8080/)
    
+<br />
 
 ## **Contributing**
 Contributions to this project are welcome. Please follow the standard GitHub fork, branch, and pull request workflow. Feel free to raise issues or feature requests to enhance this project.
 
-## **📈 GitHub Stats**
+<br />
 
+## **📈 GitHub Stats**
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Olayiwola72&layout=compact)](https://github.com/Olayiwola72)
 
 ## **🤝 Connect With Me**
