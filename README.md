@@ -49,7 +49,7 @@ To set up the project locally:
 
 1. **Listen to changes in CSS Preprocessor files (SASS files):**
 
-   The project leverages Vite & Maven to bundle both React and Spring Boot together. Use the provided script to install all dependencies and run the application.
+    Use the provided script to compile SASS and watch for changes.
 
       ```sh
       npm run compile:scss
@@ -59,7 +59,7 @@ To set up the project locally:
 
 1. **Using the live-server extension:**
 
-   The project leverages live-server to serve this application. Use the provided script to start the application.
+   For development purposes, this project leverages live-server to serve this application. Use the provided script to start the application.
 
       ```sh
       npm start
