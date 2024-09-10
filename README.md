@@ -170,7 +170,7 @@ Contributions to this project are welcome. Please follow the standard GitHub for
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Olayiwola72&layout=compact)](https://github.com/Olayiwola72)
 
 ## **🤝 Connect With Me**
-<a href="https://www.linkedin.com/in/olayiwola-akinnagbe-371686172/" target="_blank">
+<a href="https://www.linkedin.com/in/olayiwola-akinnagbe/" target="_blank">
    <img 
       align="left" 
       src="https://github.com/Olayiwola72/my-profile/blob/main/linkedin.png" 
