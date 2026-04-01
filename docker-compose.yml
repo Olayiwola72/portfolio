@@ -1,6 +1,0 @@
-# docker-compose.yml #
-services:
-  node:
-    build:
-      context: ./
-      dockerfile: node.Dockerfile
