@@ -626,7 +626,12 @@ img {
 
 .experience-topline p {
   margin: 0;
-  font-weight: 700;
+  margin-bottom: 0;
+  font-weight: 800;
+  font-size: 1.04rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--text);
 }
 
 .experience-topline {
