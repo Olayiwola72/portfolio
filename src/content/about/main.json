@@ -1,0 +1,52 @@
+{
+  "heading": "Engineering for Reliability and Scale",
+  "subheading": "Backend systems for payments, lending, and operational resilience.",
+  "bio": [
+    "For more than 6 years, I have been building backend platforms that handle real transactional load across payments, transfers, lending, search, and internal operational tooling.",
+    "My strongest work sits at the intersection of architecture and delivery: designing Spring Boot services, shaping event-driven flows with Kafka, tuning data access for PostgreSQL and MongoDB, and shipping systems that are secure, observable, and production-ready.",
+    "I also enjoy the collaborative side of engineering. I work closely with product, QA, and frontend teams, document APIs clearly, and mentor engineers so delivery quality keeps improving as teams scale."
+  ],
+  "cvLink": "https://drive.google.com/file/d/119Hkfzy2sHD9gm9V5Oe4m0Xm5vamPNgt/view",
+  "showHighlights": true,
+  "highlightsTitle": "How I Work",
+  "highlights": [
+    {
+      "title": "API-First Architecture",
+      "description": "I design services around clean contracts, secure integrations, and maintainable domain boundaries so teams can ship faster with fewer surprises.",
+      "icon": "network"
+    },
+    {
+      "title": "Event-Driven Thinking",
+      "description": "From asynchronous notifications to search and workflow orchestration, I use messaging patterns that improve responsiveness without sacrificing clarity or reliability.",
+      "icon": "activity"
+    },
+    {
+      "title": "Delivery and Mentorship",
+      "description": "I value pragmatic execution, strong code reviews, and sharing context so teams can improve throughput without lowering engineering standards.",
+      "icon": "users"
+    }
+  ],
+  "showImpact": true,
+  "impact": [
+    {
+      "target": 6,
+      "label": "Years in Backend",
+      "suffix": "+"
+    },
+    {
+      "target": 4,
+      "label": "Daily Requests",
+      "suffix": "M+"
+    },
+    {
+      "target": 60,
+      "label": "Faster Search & Delivery",
+      "suffix": "%"
+    },
+    {
+      "target": 99.95,
+      "label": "Payment Reliability",
+      "suffix": "%"
+    }
+  ]
+}

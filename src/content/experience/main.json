@@ -1,0 +1,75 @@
+{
+  "entries": [
+    {
+      "company": "Prema Consulting",
+      "role": "Senior Backend Engineer",
+      "location": "Remote",
+      "startDate": "June 2022",
+      "endDate": "Present",
+      "highlights": [
+        "Built API-first private fintech services for payments, transfers, and loan origination that now handle more than 1 million API requests daily.",
+        "Implemented Kafka-powered asynchronous email and SMS notifications, improving delivery speed by roughly 40 percent while supporting an event-driven architecture.",
+        "Integrated ElasticSearch for faster discovery workflows, reducing search time by around 60 percent across internal and customer-facing use cases.",
+        "Applied Spring Security, JWT, RBAC, and CQRS patterns to improve service security, separation of concerns, and maintainability.",
+        "Optimized PostgreSQL and MongoDB access patterns to cut API response times by 50 percent and increase throughput by 30 percent.",
+        "Mentored engineers through code reviews and delivery support, contributing to an estimated 20 percent team efficiency gain."
+      ],
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Kafka",
+        "ElasticSearch",
+        "PostgreSQL",
+        "MongoDB",
+        "AWS",
+        "Spring Security"
+      ]
+    },
+    {
+      "company": "ITSS Global",
+      "role": "Senior Backend Engineer",
+      "location": "Remote",
+      "startDate": "April 2021",
+      "endDate": "May 2022",
+      "highlights": [
+        "Developed REST APIs for payment gateways and loan processing platforms, reducing third-party onboarding time by about 50 percent.",
+        "Contributed to the migration from monolithic services to microservices, helping cut downtime by around 60 percent and improving release confidence.",
+        "Produced Swagger documentation and worked closely with frontend teams, lowering integration issues by roughly 25 percent.",
+        "Used Docker and Kubernetes to standardize environments and support more reliable deployments.",
+        "Worked in Agile teams that consistently delivered sprint commitments ahead of schedule."
+      ],
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "REST APIs",
+        "Docker",
+        "Kubernetes",
+        "Swagger",
+        "Microservices"
+      ]
+    },
+    {
+      "company": "INLAKS",
+      "role": "Backend Developer",
+      "location": "Lagos, Nigeria",
+      "startDate": "October 2018",
+      "endDate": "March 2021",
+      "highlights": [
+        "Built backend APIs for mobile payments and money transfer systems supporting more than 1 million daily transactions with 99.95 percent reliability.",
+        "Integrated third-party banking services that shortened partner integration timelines by about 40 percent.",
+        "Improved peak payment processing by 35 percent through MongoDB tuning and Redis caching strategies.",
+        "Introduced Jenkins and Docker based CI/CD improvements that reduced deployment errors by 90 percent and cut deployment time by around 40 percent.",
+        "Built internal automation tools that saved the team more than 10 hours per week and improved delivery consistency."
+      ],
+      "skills": [
+        "Java",
+        "MongoDB",
+        "Redis",
+        "Jenkins",
+        "Docker",
+        "CI/CD",
+        "Payment Systems"
+      ]
+    }
+  ]
+}

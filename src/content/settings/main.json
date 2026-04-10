@@ -1,0 +1,74 @@
+{
+  "personName": "Olayiwola Akinnagbe",
+  "role": "Backend Systems Engineer",
+  "location": "Lagos, Nigeria",
+  "phone": "+2348063136462",
+  "siteName": "Olayiwola Akinnagbe | Backend Systems Engineer | Distributed Systems",
+  "description": "Backend systems engineer focused on distributed infrastructure, fintech architecture, and AI tooling—building production-grade microservices and resilient cloud-native systems.",
+  "oneLiner": "Designing resilient APIs, distributed systems, and high-trust financial infrastructure.",
+  "lookingFor": "Open to backend systems, platform, and distributed infrastructure roles where reliability, scale, and delivery discipline matter.",
+  "email": "olayiwola72@gmail.com",
+  "contactMeLink": "https://linkedin.com/in/olayiwola-akinnagbe",
+  "availability": "Open to backend systems opportunities",
+  "socials": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/olayiwola-akinnagbe",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/Olayiwola72",
+      "icon": "github"
+    },
+    {
+      "platform": "Resume",
+      "url": "https://drive.google.com/file/d/119Hkfzy2sHD9gm9V5Oe4m0Xm5vamPNgt/view",
+      "icon": "file"
+    },
+    {
+      "platform": "Writing",
+      "url": "https://medium.com/@olayiwola72",
+      "icon": "pen"
+    },
+    {
+      "platform": "Speaking",
+      "url": "https://sessionize.com/olayiwola-akinnagbe",
+      "icon": "calendar"
+    },
+    {
+      "platform": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=SQvrXmIAAAAJ&hl=en",
+      "icon": "graduation-cap"
+    },
+    {
+      "platform": "X",
+      "url": "https://x.com/OlayiwolaAkinn1",
+      "icon": "x"
+    },
+    {
+      "platform": "Portfolio",
+      "url": "https://olayiwola-akinnagbe.netlify.app/",
+      "icon": "globe"
+    }
+  ],
+  "seo": {
+    "ogImage": "/og-default.png",
+    "keywords": [
+      "Backend Systems Engineer",
+      "Java",
+      "Spring Boot",
+      "Kafka",
+      "Microservices Architecture",
+      "Distributed Systems",
+      "System Design",
+      "Rate Limiting",
+      "Raft Consensus",
+      "Fintech APIs",
+      "PostgreSQL",
+      "MongoDB",
+      "AWS",
+      "Payment Systems"
+    ]
+  }
+}

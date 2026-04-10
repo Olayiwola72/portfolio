@@ -1,0 +1,59 @@
+{
+  "categories": [
+    {
+      "title": "Backend Engineering",
+      "description": "Building API-first microservices and business-critical platforms with a focus on scalability, security, and maintainability.",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Spring Cloud",
+        "Spring Security",
+        "REST APIs",
+        "Microservices",
+        "CQRS"
+      ]
+    },
+    {
+      "title": "Data, Search & Messaging",
+      "description": "Designing resilient persistence and asynchronous workflows for high-throughput products.",
+      "skills": [
+        "PostgreSQL",
+        "MongoDB",
+        "MySQL",
+        "Redis",
+        "ElasticSearch",
+        "Kafka",
+        "Hibernate"
+      ]
+    },
+    {
+      "title": "Cloud & Delivery",
+      "description": "Shipping production systems with automated pipelines, containerization, and cloud infrastructure.",
+      "skills": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "GitHub Actions",
+        "CI/CD",
+        "Linux"
+      ]
+    },
+    {
+      "title": "Quality & Collaboration",
+      "description": "Working across engineering disciplines with strong testing, documentation, and delivery practices.",
+      "skills": [
+        "JUnit",
+        "Mockito",
+        "Swagger / OpenAPI",
+        "Agile",
+        "TDD",
+        "BDD",
+        "Pair Programming",
+        "React",
+        "Git",
+        "JIRA"
+      ]
+    }
+  ]
+}

@@ -1,74 +1,73 @@
-# Olayiwola Akinnagbe Portfolio
+# React + TypeScript + Vite
 
-A redesigned personal portfolio built to present Olayiwola Akinnagbe as a senior backend engineer with strong systems thinking and polished product execution.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-The site now focuses on two flagship projects:
+Currently, two official plugins are available:
 
-- [Raft Consensus Visualizer](https://raft-consensus-visualizer.netlify.app/)
-- [Rate Limiting Simulations Lab](https://rate-limiting-simulations.netlify.app/)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Stack
+## React Compiler
 
-- React
-- TypeScript
-- Vite
-- CSS
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## What Changed
+## Expanding the ESLint configuration
 
-- Replaced the old static HTML template with a React + TypeScript app
-- Removed the Fastcash project from the portfolio
-- Reframed the portfolio around distributed systems and backend engineering depth
-- Introduced a modern glassy UI inspired by premium Apple-style product surfaces
-- Simplified the codebase so future updates are easier to make
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## Local Development
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-```bash
-npm install
-npm run dev
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-The dev server runs on the local Vite default URL shown in your terminal.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## Production Build
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-```bash
-npm run build
-npm run preview
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-
-The production output is generated in `dist/`.
-
-## Deployment
-
-This portfolio is a static frontend and can be deployed easily to:
-
-- Netlify
-- Vercel
-- GitHub Pages
-
-Recommended settings:
-
-- Build command: `npm run build`
-- Publish directory: `dist`
-
-## Content Direction
-
-The portfolio now emphasizes:
-
-- senior backend engineering experience
-- scalable systems and reliability thinking
-- explainable system design through interactive products
-- clean, modern presentation with strong visual hierarchy
-
-## Contact
-
-- GitHub: https://github.com/Olayiwola72
-- LinkedIn: https://www.linkedin.com/in/olayiwola-akinnagbe/
-- X / Twitter: https://twitter.com/OlayiwolaAkinn1
-- Resume: https://drive.google.com/file/d/119Hkfzy2sHD9gm9V5Oe4m0Xm5vamPNgt/view?usp=sharing
-
-## License
-
-This project is licensed under the GPL-3.0 License. See [LICENSE](./LICENSE).

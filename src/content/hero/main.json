@@ -1,0 +1,8 @@
+{
+  "headingMain": "Backend Systems Engineer",
+  "headingAccent": "Building Reliable",
+  "headingSuffix": "Distributed Systems.",
+  "description": "I design and ship scalable financial infrastructure, production-grade microservices, and resilient cloud-native systems—turning caffeine into clean APIs and fault-tolerant architecture.",
+  "stackTitle": "Primary Focus",
+  "stack": ["Java", "Spring Boot", "Distributed Systems", "System Design", "AWS", "Kafka"]
+}

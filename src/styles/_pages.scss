@@ -1,0 +1,116 @@
+@use "./mixins" as *;
+
+.section-heading--projects {
+  margin-bottom: 2.5rem;
+}
+
+.not-found-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--background);
+  text-align: center;
+  overflow: hidden;
+}
+
+.not-found-page__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  filter: blur(120px);
+  transform: translate(-50%, -50%);
+}
+
+.not-found-page__logo-wrap,
+.not-found-page__content,
+.not-found-page .button {
+  position: relative;
+  z-index: 1;
+}
+
+.not-found-page__logo-wrap {
+  margin-bottom: 3rem;
+  animation: fade-in 1s ease forwards;
+
+  .brand-mark {
+    transition: transform 0.5s ease;
+  }
+
+  .brand-mark__initials {
+    width: 5rem;
+    height: 5rem;
+    flex-basis: 5rem;
+    border-radius: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  &:hover .brand-mark {
+    transform: scale(1.08);
+  }
+}
+
+.not-found-page__content {
+  display: grid;
+  gap: 2rem;
+  animation: slide-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+
+  h1 {
+    margin: 0;
+    color: var(--primary);
+    font-size: clamp(4rem, 12vw, 7rem);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+  }
+
+  h2 {
+    margin: 0.25rem 0 0;
+    font-family: "Geist Mono Variable", "Geist Mono", ui-monospace, monospace;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  p {
+    max-width: 24rem;
+    margin: 0 auto;
+    color: var(--muted-foreground);
+    font-style: italic;
+    line-height: 1.8;
+  }
+}
+
+.not-found-page__command {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  font-family: "Geist Mono Variable", "Geist Mono", ui-monospace, monospace;
+  font-size: 0.85rem;
+  color: var(--primary);
+
+  span {
+    color: color-mix(in srgb, var(--secondary) 70%, transparent);
+  }
+}
+
+.not-found-page .button {
+  margin-top: 3rem;
+  animation: fade-in 1s ease forwards;
+  animation-delay: 0.4s;
+}

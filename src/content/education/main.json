@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {
+      "school": "University of Lagos, Nigeria",
+      "degree": "Master of Information Technology",
+      "period": "Oct 2021 – Dec 2023",
+      "description": "Advanced study across software foundations, computer architecture, algorithms, artificial intelligence, computational theory, and databases."
+    },
+    {
+      "school": "University of Ilorin, Nigeria",
+      "degree": "B.Sc. Physics",
+      "period": "Oct 2012 – Oct 2016",
+      "description": "Built a strong foundation in analytical reasoning, quantitative problem-solving, and systems thinking that continues to influence my engineering work."
+    }
+  ]
+}

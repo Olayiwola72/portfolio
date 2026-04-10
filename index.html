@@ -2,27 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Olayiwola Akinnagbe | Senior Backend Engineer</title>
     <meta
       name="description"
-      content="Senior backend engineer crafting resilient distributed systems, developer tooling, and polished interactive learning products."
+      content="Senior Backend Engineer with 6+ years of experience building scalable fintech APIs, microservices, and data-driven SaaS systems with Java, Spring Boot, Kafka, PostgreSQL, MongoDB, and AWS."
     />
     <meta
-      name="keywords"
-      content="Olayiwola Akinnagbe, backend engineer, portfolio, distributed systems, raft consensus, rate limiting, Java, Spring Boot, Laravel"
+      name="title"
+      content="Olayiwola Akinnagbe | Senior Backend Engineer | Java &amp; Spring Boot"
     />
-    <meta name="theme-color" content="#0b1020" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Olayiwola Akinnagbe | Senior Backend Engineer | Java &amp; Spring Boot"
+    />
+    <meta
+      property="og:description"
+      content="Senior Backend Engineer with 6+ years of experience building scalable fintech APIs, microservices, and data-driven SaaS systems with Java, Spring Boot, Kafka, PostgreSQL, MongoDB, and AWS."
+    />
+    <meta property="og:image" content="/og-default.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Olayiwola Akinnagbe | Senior Backend Engineer | Java &amp; Spring Boot"
+    />
+    <meta
+      property="twitter:description"
+      content="Senior Backend Engineer with 6+ years of experience building scalable fintech APIs, microservices, and data-driven SaaS systems with Java, Spring Boot, Kafka, PostgreSQL, MongoDB, and AWS."
+    />
+    <meta property="twitter:image" content="/og-default.png" />
+    <link rel="canonical" href="https://olayiwola-akinnagbe.netlify.app/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" src="/src/main.tsx"></script>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olayiwola Akinnagbe | Senior Backend Engineer | Java &amp; Spring Boot</title>
+    <script>
+      const getThemePreference = () => {
+        const storedTheme = localStorage.getItem("theme");
+
+        if (storedTheme === "light" || storedTheme === "dark") {
+          return storedTheme;
+        }
+
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      };
+
+      const applyTheme = (theme) => {
+        const root = document.documentElement;
+        root.classList.toggle("dark", theme === "dark");
+        root.style.colorScheme = theme;
+      };
+
+      applyTheme(getThemePreference());
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
