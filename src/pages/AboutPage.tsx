@@ -30,12 +30,14 @@ export function AboutPage() {
                     <strong>{siteSettings.location}</strong>
                   </div>
                   <div className="about-intro__profile-item">
-                    <span>Email</span>
-                    <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a>
-                  </div>
-                  <div className="about-intro__profile-item">
-                    <span>Phone</span>
-                    <a href={`tel:${siteSettings.phone}`}>{siteSettings.phone}</a>
+                    <a 
+                      href={`mailto:${siteSettings.email}?subject=Interest%20in%20Hiring%20You`} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      style={{color: 'var(--primary)' }}
+                    >
+                      Hire Me
+                    </a>
                   </div>
                 </div>
               </div>
