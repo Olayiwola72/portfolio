@@ -110,14 +110,6 @@ export function NavBar() {
               Writing
             </a>
             <a
-              className="nav-link"
-              href="https://olayiwola-akinnagbe.netlify.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Portfolio
-            </a>
-            <a
               className="nav-link nav-link--nowrap is-active"
               href="mailto:olayiwola72@gmail.com?subject=Interest%20in%20Hiring%20You"
             >
