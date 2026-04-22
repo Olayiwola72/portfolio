@@ -1,8 +1,8 @@
 {
-  "headingMain": "Backend Systems Engineer",
+  "headingMain": "Senior Backend Engineer",
   "headingAccent": "Building Reliable",
   "headingSuffix": "Distributed Systems.",
-  "description": "I design and ship scalable financial infrastructure, production-grade microservices, and resilient cloud-native systems—turning caffeine into clean APIs and fault-tolerant architecture.",
+  "description": "I architect API-first fintech infrastructure in Java and Spring Boot, building secure distributed systems for payments, lending, and money movement that hold up under real production load.",
   "stackTitle": "Primary Focus",
-  "stack": ["Java", "Spring Boot", "Distributed Systems", "System Design", "AWS", "Kafka"]
+  "stack": ["Java", "Spring Boot", "Microservices", "Kafka", "AWS", "System Design"]
 }

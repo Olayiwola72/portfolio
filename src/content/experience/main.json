@@ -7,59 +7,67 @@
       "startDate": "June 2022",
       "endDate": "Present",
       "highlights": [
-        "Built API-first private fintech services for payments, transfers, and loan origination that now handle more than 1 million API requests daily.",
-        "Implemented Kafka-powered asynchronous email and SMS notifications, improving delivery speed by roughly 40 percent while supporting an event-driven architecture.",
-        "Integrated ElasticSearch for faster discovery workflows, reducing search time by around 60 percent across internal and customer-facing use cases.",
-        "Applied Spring Security, JWT, RBAC, and CQRS patterns to improve service security, separation of concerns, and maintainability.",
-        "Optimized PostgreSQL and MongoDB access patterns to cut API response times by 50 percent and increase throughput by 30 percent.",
-        "Mentored engineers through code reviews and delivery support, contributing to an estimated 20 percent team efficiency gain."
+        "Owned backend architecture for a payment orchestration platform handling 4M+ API requests per day across payments, cross-border transfers, and loan origination, with 8+ Spring Boot microservices behind Spring Cloud Gateway.",
+        "Designed Kafka-based asynchronous notification flows with idempotent consumers and recovery handling, reducing user-facing latency in core payment journeys and preventing cascading failures under peak load.",
+        "Migrated high-volume financial search from relational queries to Elasticsearch, cutting response times by about 60 percent across transaction and customer data workflows.",
+        "Delivered layered access control with Spring Security, OAuth2, JWT, and RBAC, enforcing least-privilege access across regulated financial APIs and strengthening PCI-DSS readiness.",
+        "Led digital onboarding flows with KYC, KYB, AML, and document-verification integrations, reducing compliance-related onboarding errors by roughly 70 percent.",
+        "Built fault-tolerant regulatory file submission services with SQS-backed retries and DLQ handling, achieving 99.9 percent-plus delivery success on Central Bank submissions while mentoring 4 engineers through code reviews and TDD."
       ],
       "skills": [
         "Java",
         "Spring Boot",
+        "Spring Cloud Gateway",
+        "Resilience4j",
         "Kafka",
-        "ElasticSearch",
+        "SQS",
+        "Elasticsearch",
         "PostgreSQL",
         "MongoDB",
         "AWS",
+        "OAuth2",
         "Spring Security"
       ]
     },
     {
       "company": "ITSS Global",
-      "role": "Senior Backend Engineer",
+      "role": "Backend Engineer",
       "location": "Remote",
       "startDate": "April 2021",
       "endDate": "May 2022",
       "highlights": [
-        "Developed REST APIs for payment gateways and loan processing platforms, reducing third-party onboarding time by about 50 percent.",
-        "Contributed to the migration from monolithic services to microservices, helping cut downtime by around 60 percent and improving release confidence.",
-        "Produced Swagger documentation and worked closely with frontend teams, lowering integration issues by roughly 25 percent.",
-        "Used Docker and Kubernetes to standardize environments and support more reliable deployments.",
-        "Worked in Agile teams that consistently delivered sprint commitments ahead of schedule."
+        "Designed external-facing REST APIs for payment gateways and loan processing systems, standardizing versioning, error contracts, and backward compatibility for smoother third-party integrations.",
+        "Helped lead the migration of a legacy loan platform into Spring Boot and Spring Cloud microservices, cutting downtime by roughly 60 percent and improving release confidence.",
+        "Partnered with frontend teams on API contract design and Swagger / OpenAPI documentation, reducing integration issues by around 25 percent and enabling parallel delivery.",
+        "Decoupled non-critical workloads from synchronous loan-processing flows, improving throughput stability under peak traffic and reducing operational bottlenecks.",
+        "Profiled production bottlenecks, introduced targeted Redis caching, and built ELK-backed observability workflows that reduced service latency and saved 10+ engineering hours per week."
       ],
       "skills": [
         "Java",
         "Spring Boot",
+        "Spring Cloud",
+        "Apache Camel",
         "REST APIs",
+        "OpenAPI",
+        "Redis",
+        "ELK Stack",
         "Docker",
-        "Kubernetes",
         "Swagger",
         "Microservices"
       ]
     },
     {
       "company": "INLAKS",
-      "role": "Backend Developer",
+      "role": "Associate Backend Developer",
       "location": "Lagos, Nigeria",
       "startDate": "October 2018",
       "endDate": "March 2021",
       "highlights": [
-        "Built backend APIs for mobile payments and money transfer systems supporting more than 1 million daily transactions with 99.95 percent reliability.",
-        "Integrated third-party banking services that shortened partner integration timelines by about 40 percent.",
-        "Improved peak payment processing by 35 percent through MongoDB tuning and Redis caching strategies.",
-        "Introduced Jenkins and Docker based CI/CD improvements that reduced deployment errors by 90 percent and cut deployment time by around 40 percent.",
-        "Built internal automation tools that saved the team more than 10 hours per week and improved delivery consistency."
+        "Maintained 99.95 percent transaction reliability across mobile payment and money-transfer services processing 1M+ daily transactions, using retries, idempotency, and resilient integration patterns.",
+        "Engineered structured integration APIs for partner banks and payment systems, reducing onboarding timelines by about 40 percent through versioned REST contracts and standardized validation.",
+        "Improved peak payment-processing speed by around 35 percent by combining Redis caching with MongoDB-backed high-throughput storage for time-critical transaction flows.",
+        "Designed Jenkins and Docker-based CI/CD pipelines that eliminated roughly 90 percent of deployment errors and cut release time by around 40 percent.",
+        "Expanded JUnit and Mockito coverage across critical payment flows, reducing post-release defects and improving delivery confidence."
       ],
       "skills": [
         "Java",
@@ -68,6 +76,8 @@
         "Jenkins",
         "Docker",
         "CI/CD",
+        "JUnit 5",
+        "Mockito",
         "Payment Systems"
       ]
     }

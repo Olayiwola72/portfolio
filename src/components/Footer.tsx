@@ -40,9 +40,6 @@ export function Footer() {
               <a className="site-footer__link" href={siteSettings.contactMeLink}>
                 Hire Me
               </a>
-              <a className="site-footer__link" href={`tel:${siteSettings.phone}`}>
-                {siteSettings.phone}
-              </a>
               <p className="site-footer__location">{siteSettings.location}</p>
               <div className="site-footer__socials">
                 {siteSettings.socials.map((social) => (
@@ -63,7 +60,7 @@ export function Footer() {
 
         <div className="site-footer__bottom">
           <p className="site-footer__copyright">
-            © {new Date().getFullYear()} — Handcrafted with React + Vite | Designed by Olayiwola Akinnagbe
+            © {new Date().getFullYear()} {siteSettings.personName}. All rights reserved.
           </p>
           <div className="site-footer__status">
             <span className="availability-dot" aria-hidden="true" />

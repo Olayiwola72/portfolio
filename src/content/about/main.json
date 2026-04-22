@@ -2,9 +2,9 @@
   "heading": "Engineering for Reliability and Scale",
   "subheading": "Backend systems for payments, lending, and operational resilience.",
   "bio": [
-    "For more than 6 years, I have been building backend platforms that handle real transactional load across payments, transfers, lending, search, and internal operational tooling.",
-    "My strongest work sits at the intersection of architecture and delivery: designing Spring Boot services, shaping event-driven flows with Kafka, tuning data access for PostgreSQL and MongoDB, and shipping systems that are secure, observable, and production-ready.",
-    "I also enjoy the collaborative side of engineering. I work closely with product, QA, and frontend teams, document APIs clearly, and mentor engineers so delivery quality keeps improving as teams scale."
+    "For more than 6 years, I have been building backend platforms that handle real transactional load across payments, transfers, lending, onboarding, and internal operational tooling, including systems serving 4M+ API requests per day.",
+    "My strongest work sits at the intersection of architecture and delivery: designing Spring Boot microservices, shaping event-driven flows with Kafka and SQS, tuning PostgreSQL, MongoDB, Redis, and Elasticsearch, and shipping systems that are secure, observable, and production-ready.",
+    "I bring a security-first and team-first mindset to delivery, combining Spring Security, OAuth2, JWT, and RBAC patterns with strong code reviews, TDD, and mentorship so teams can scale quality alongside throughput."
   ],
   "cvLink": "https://drive.google.com/file/d/10Eo_1hJi5EEXSOfAdAJCA14eIY5MbMMI/view?usp=sharing",
   "showHighlights": true,
@@ -35,12 +35,12 @@
     },
     {
       "target": 4,
-      "label": "Daily Requests",
+      "label": "API Requests / Day",
       "suffix": "M+"
     },
     {
       "target": 60,
-      "label": "Faster Search & Delivery",
+      "label": "Faster Search Queries",
       "suffix": "%"
     },
     {

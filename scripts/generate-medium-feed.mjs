@@ -110,7 +110,14 @@ if (typeof sourceUrl !== "string" || sourceUrl.length === 0) {
 
 try {
   const feed = await parser.parseURL(sourceUrl);
-  const articles = (feed.items ?? []).slice(0, 6).map((item) => ({
+  const items = [...(feed.items ?? [])].toSorted((first, second) => {
+    const firstTime = new Date(first.isoDate ?? first.pubDate ?? 0).getTime() || 0;
+    const secondTime = new Date(second.isoDate ?? second.pubDate ?? 0).getTime() || 0;
+
+    return secondTime - firstTime;
+  });
+
+  const articles = items.slice(0, 3).map((item) => ({
     title: item.title ?? "Untitled article",
     link: item.link ?? sourceUrl,
     publishedAt: item.isoDate ?? item.pubDate ?? new Date().toISOString(),

@@ -100,7 +100,6 @@ export interface SiteSettings {
   personName: string;
   role: string;
   location: string;
-  phone: string;
   siteName: string;
   description: string;
   oneLiner: string;

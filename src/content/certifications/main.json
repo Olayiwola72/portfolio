@@ -3,14 +3,15 @@
     {
       "name": "AWS Certified Solutions Architect – Associate",
       "issuer": "Amazon Web Services",
-      "period": "2024",
+      "period": "Mar 2026",
+      "credential": "SAA-C03",
       "badgeUrl": "https://www.credly.com/badges/0c7884d1-b85d-4e90-a1c8-4af2274f9f28",
       "badgeImage": "https://images.credly.com/size/80x80/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
     },
     {
       "name": "AWS Certified Cloud Practitioner",
       "issuer": "Amazon Web Services",
-      "period": "2024",
+      "period": "Nov 2025",
       "credential": "CLF-C02",
       "badgeUrl": "https://www.credly.com/badges/54ebbe42-299d-484a-9d34-868101d49bfa",
       "badgeImage": "https://images.credly.com/size/80x80/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
@@ -18,7 +19,7 @@
     {
       "name": "AWS Certified Developer – Associate",
       "issuer": "Amazon Web Services",
-      "period": "2024",
+      "period": "Jan 2026",
       "credential": "DVA-C02",
       "badgeUrl": "https://www.credly.com/badges/fe9a9788-feed-4f28-b03b-7058fe62b410",
       "badgeImage": "https://images.credly.com/size/80x80/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"

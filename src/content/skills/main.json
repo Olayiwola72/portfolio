@@ -2,15 +2,17 @@
   "categories": [
     {
       "title": "Backend Engineering",
-      "description": "Building API-first microservices and business-critical platforms with a focus on scalability, security, and maintainability.",
+      "description": "Building API-first microservices and regulated fintech platforms with a focus on scalability, security, and maintainability.",
       "skills": [
         "Java",
         "Spring Boot",
         "Spring Cloud",
         "Spring Security",
+        "OAuth2 / JWT",
         "REST APIs",
         "Microservices",
-        "CQRS"
+        "CQRS",
+        "Resilience4j"
       ]
     },
     {
@@ -21,8 +23,10 @@
         "MongoDB",
         "MySQL",
         "Redis",
-        "ElasticSearch",
+        "Elasticsearch",
         "Kafka",
+        "RabbitMQ",
+        "SQS",
         "Hibernate"
       ]
     },
@@ -33,6 +37,7 @@
         "AWS",
         "Docker",
         "Kubernetes",
+        "CloudFormation",
         "Jenkins",
         "GitHub Actions",
         "CI/CD",
@@ -43,12 +48,12 @@
       "title": "Quality & Collaboration",
       "description": "Working across engineering disciplines with strong testing, documentation, and delivery practices.",
       "skills": [
-        "JUnit",
+        "JUnit 5",
         "Mockito",
         "Swagger / OpenAPI",
         "Agile",
         "TDD",
-        "BDD",
+        "Clean Architecture",
         "Pair Programming",
         "React",
         "Git",

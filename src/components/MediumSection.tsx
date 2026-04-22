@@ -8,7 +8,12 @@ const publishedAtFormatter = new Intl.DateTimeFormat("en", {
 
 export function MediumSection() {
   const writingProfile = getSocialLinkByIcon("pen")?.url ?? mediumFeed.sourceUrl;
-  const articles = mediumFeed.articles.slice(0, 3);
+  const articles = [...mediumFeed.articles]
+    .toSorted(
+      (first, second) =>
+        new Date(second.publishedAt).getTime() - new Date(first.publishedAt).getTime(),
+    )
+    .slice(0, 3);
 
   if (articles.length === 0) {
     return null;
