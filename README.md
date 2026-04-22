@@ -76,16 +76,15 @@ All portfolio content is stored as JSON in `src/content/`. To update:
 - Impact statistics showcase
 - Timeline-based experience display
 
-## Connect
 
-- **GitHub**: https://github.com/Olayiwola72
-- **LinkedIn**: https://www.linkedin.com/in/olayiwola-akinnagbe/
-- **Twitter**: https://twitter.com/OlayiwolaAkinn1
-- **Portfolio**: https://olayiwola-akinnagbe.netlify.app/
-- **Resume**: https://drive.google.com/file/d/10Eo_1hJi5EEXSOfAdAJCA14eIY5MbMMI/view
+## 📫 Contact
 
----
+Built by Olayiwola Akinnagbe.
 
-## License
+- GitHub: https://github.com/Olayiwola72
+- LinkedIn: https://www.linkedin.com/in/olayiwola-akinnagbe/
+- Twitter: https://twitter.com/OlayiwolaAkinn1
+- Portfolio: https://olayiwola-akinnagbe.netlify.app/
+- Resume: [https://drive.google.com/file/d/119Hkfzy2sHD9gm9V5Oe4m0Xm5vamPNgt/view?usp=sharing](https://drive.google.com/file/d/10Eo_1hJi5EEXSOfAdAJCA14eIY5MbMMI/view)
 
-MIT
+If you would like to collaborate, give feedback, or hire me, feel free to reach out.
