@@ -1,0 +1,48 @@
+{
+  "entries": [
+    {
+      "slug": "raft-consensus-visualizer",
+      "title": "Raft Consensus Visualizer",
+      "description": "A polished, deterministic in-browser simulation for studying Raft leader election, quorum, heartbeats, log replication, and failure recovery through an interactive UI.",
+      "category": "Distributed Systems",
+      "metrics": "Deterministic Raft simulation",
+      "tags": ["React", "TypeScript", "Vite", "SCSS", "Distributed Systems", "Raft"],
+      "pubDate": "2026-04-10T00:00:00.000Z",
+      "featured": true,
+      "order": 1,
+      "thumbnail": "https://raw.githubusercontent.com/Olayiwola72/raft-consensus-visualizer/main/docs/media/app-preview.png",
+      "links": [
+        {
+          "text": "Live Demo",
+          "url": "https://raft-consensus-visualizer.netlify.app/"
+        },
+        {
+          "text": "Repository",
+          "url": "https://github.com/Olayiwola72/raft-consensus-visualizer"
+        }
+      ]
+    },
+    {
+      "slug": "rate-limiting-simulations",
+      "title": "Rate Limiting Simulations Lab",
+      "description": "An interactive simulation lab for exploring how popular rate limiting algorithms behave under burst and steady traffic conditions.",
+      "category": "Backend Systems",
+      "metrics": "Visual rate limiting lab",
+      "tags": ["React", "TypeScript", "Vite", "SCSS", "System Design", "Rate Limiting"],
+      "pubDate": "2026-04-10T00:00:00.000Z",
+      "featured": true,
+      "order": 2,
+      "thumbnail": "https://raw.githubusercontent.com/Olayiwola72/rate-limiting-simulations/main/docs/media/app-preview.png",
+      "links": [
+        {
+          "text": "Live Demo",
+          "url": "https://rate-limiting-simulations.netlify.app/"
+        },
+        {
+          "text": "Repository",
+          "url": "https://github.com/Olayiwola72/rate-limiting-simulations"
+        }
+      ]
+    }
+  ]
+}

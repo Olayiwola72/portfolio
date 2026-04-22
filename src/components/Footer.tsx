@@ -37,10 +37,7 @@ export function Footer() {
           <div>
             <h4 className="site-footer__heading">Connect</h4>
             <div className="site-footer__contact">
-              <a
-                className="site-footer__link"
-                href={`mailto:${siteSettings.email}?subject=Interest%20in%20Hiring%20You`}
-              >
+              <a className="site-footer__link" href={siteSettings.contactMeLink}>
                 Hire Me
               </a>
               <a className="site-footer__link" href={`tel:${siteSettings.phone}`}>

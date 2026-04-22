@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-04-22T06:55:30.833Z",
+  "sourceUrl": "https://medium.com/feed/@olayiwola72",
+  "articles": [
+    {
+      "title": "Rate Limiting Explained with Real Examples: Fixed Window, Sliding Window, Token Bucket & Leaky…",
+      "link": "https://blog.stackademic.com/rate-limiting-explained-with-real-examples-fixed-window-sliding-window-token-bucket-leaky-14988de1a05f?source=rss-2bf0b686476e------2",
+      "publishedAt": "2026-04-15T08:24:21.000Z",
+      "excerpt": "Why ChatGPT says “You’ve hit the limit”, and what that teaches us about distributed systems Have you ever been told by ChatGPT on the free plan:",
+      "categories": [
+        "rate-limiting",
+        "distributed-systems",
+        "backend-development"
+      ],
+      "readingTimeMinutes": 5,
+      "thumbnail": "https://cdn-images-1.medium.com/max/902/1*WeFhve5oAvLXoM5hjdsQHQ.png"
+    },
+    {
+      "title": "Raft Consensus Explained Visually: Leader Election, Quorum, and Failure Recovery in Distributed…",
+      "link": "https://blog.stackademic.com/raft-consensus-explained-visually-leader-election-quorum-and-failure-recovery-in-distributed-c641d9dca2b5?source=rss-2bf0b686476e------2",
+      "publishedAt": "2026-04-07T16:54:30.000Z",
+      "excerpt": "Why distributed systems need leaders, and how they replace them without chaos. Imagine a democratic country with five senators. They debate and argue policies. They propose new laws, but nothing becomes official unless t...",
+      "categories": [
+        "distributed-system-design",
+        "distributed-systems",
+        "consensus-algorithm"
+      ],
+      "readingTimeMinutes": 7,
+      "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*4fjJbh-PLZwClhbNTfwPtQ.png"
+    },
+    {
+      "title": "Memory Is a Budget: Understanding Strong, Soft, Weak, and Phantom References in Java",
+      "link": "https://blog.stackademic.com/memory-is-a-budget-understanding-strong-soft-weak-and-phantom-references-in-java-14e8768916be?source=rss-2bf0b686476e------2",
+      "publishedAt": "2026-04-01T18:47:24.000Z",
+      "excerpt": "Introduction: Why JVM Reference Types Matter I am going to begin this write-up by discussing one of my interview failures and what I learned from it.",
+      "categories": [
+        "software-architecture",
+        "backend-development",
+        "java"
+      ],
+      "readingTimeMinutes": 6,
+      "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*iFmZjcHlMiotVIF3w7Z8iw.png"
+    }
+  ]
+}

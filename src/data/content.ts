@@ -3,6 +3,8 @@ import certificationsContent from "../content/certifications/main.json";
 import educationContent from "../content/education/main.json";
 import experienceContent from "../content/experience/main.json";
 import heroContent from "../content/hero/main.json";
+import mediumContent from "../content/medium/main.json";
+import projectContent from "../content/projects/main.json";
 import settingsContent from "../content/settings/main.json";
 import skillsContent from "../content/skills/main.json";
 
@@ -105,6 +107,7 @@ export interface SiteSettings {
   lookingFor: string;
   email: string;
   contactMeLink: string;
+  mediumFeedUrl: string;
   availability: string;
   socials: SocialLink[];
   seo: {
@@ -118,7 +121,7 @@ export interface ProjectLink {
   url: string;
 }
 
-export interface Project {
+export interface ProjectSummary {
   slug: string;
   title: string;
   description: string;
@@ -130,170 +133,37 @@ export interface Project {
   order: number;
   thumbnail?: string;
   links?: ProjectLink[];
+}
+
+export interface Project extends ProjectSummary {
   body: string;
 }
 
-const projectModules = import.meta.glob("../content/projects/*.md", {
-  eager: true,
+export interface MediumArticle {
+  title: string;
+  link: string;
+  publishedAt: string;
+  excerpt: string;
+  categories: string[];
+  readingTimeMinutes: number;
+  thumbnail?: string | null;
+}
+
+export interface MediumFeedContent {
+  generatedAt: string;
+  sourceUrl: string;
+  articles: MediumArticle[];
+}
+
+const projectBodyModules = import.meta.glob("../content/projects/*.md", {
   query: "?raw",
   import: "default",
-}) as Record<string, string>;
+}) as Record<string, () => Promise<string>>;
 
-type FrontmatterValue =
-  | string
-  | number
-  | boolean
-  | string[]
-  | ProjectLink[]
-  | undefined;
+const projectBodyCache = new Map<string, Promise<string>>();
 
-type FrontmatterMap = Record<string, FrontmatterValue>;
-
-const parseScalarValue = (value: string): FrontmatterValue => {
-  const trimmedValue = value.trim();
-
-  if (trimmedValue.startsWith("[") && trimmedValue.endsWith("]")) {
-    return JSON.parse(trimmedValue) as string[];
-  }
-
-  if (
-    (trimmedValue.startsWith('"') && trimmedValue.endsWith('"')) ||
-    (trimmedValue.startsWith("'") && trimmedValue.endsWith("'"))
-  ) {
-    return trimmedValue.slice(1, -1);
-  }
-
-  if (trimmedValue === "true" || trimmedValue === "false") {
-    return trimmedValue === "true";
-  }
-
-  if (/^\d+$/.test(trimmedValue)) {
-    return Number(trimmedValue);
-  }
-
-  return trimmedValue;
-};
-
-const parseFrontmatter = (raw: string) => {
-  const match = raw.match(/^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/);
-
-  if (!match) {
-    return { data: {}, content: raw.trim() };
-  }
-
-  const [, frontmatterBlock, markdownBody] = match;
-  const lines = frontmatterBlock.split("\n");
-  const data: FrontmatterMap = {};
-
-  for (let index = 0; index < lines.length; index += 1) {
-    const line = lines[index];
-
-    if (!line?.trim()) {
-      continue;
-    }
-
-    const fieldMatch = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
-
-    if (!fieldMatch) {
-      continue;
-    }
-
-    const [, key, rawValue] = fieldMatch;
-
-    if (!rawValue) {
-      const nestedItems: ProjectLink[] = [];
-      let nestedIndex = index + 1;
-
-      while (nestedIndex < lines.length && /^\s/.test(lines[nestedIndex] ?? "")) {
-        const itemLine = lines[nestedIndex]?.trim() ?? "";
-
-        if (itemLine.startsWith("- ")) {
-          const object: Partial<ProjectLink> = {};
-          const firstField = itemLine.slice(2);
-          const [firstKey, ...firstValueParts] = firstField.split(":");
-
-          if (firstKey && firstValueParts.length > 0) {
-            object[firstKey.trim() as keyof ProjectLink] = String(
-              parseScalarValue(firstValueParts.join(":")),
-            );
-          }
-
-          nestedIndex += 1;
-
-          while (
-            nestedIndex < lines.length &&
-            /^\s{4,}/.test(lines[nestedIndex] ?? "")
-          ) {
-            const nestedField = lines[nestedIndex]?.trim() ?? "";
-            const [childKey, ...childValueParts] = nestedField.split(":");
-
-            if (childKey && childValueParts.length > 0) {
-              object[childKey.trim() as keyof ProjectLink] = String(
-                parseScalarValue(childValueParts.join(":")),
-              );
-            }
-
-            nestedIndex += 1;
-          }
-
-          nestedItems.push(object as ProjectLink);
-          continue;
-        }
-
-        nestedIndex += 1;
-      }
-
-      data[key] = nestedItems;
-      index = nestedIndex - 1;
-      continue;
-    }
-
-    data[key] = parseScalarValue(rawValue);
-  }
-
-  return { data, content: markdownBody.trim() };
-};
-
-const toIsoDate = (value: unknown) => {
-  if (value instanceof Date) {
-    return value.toISOString();
-  }
-
-  return new Date(String(value)).toISOString();
-};
-
-const toSlug = (path: string) =>
-  path.split("/").pop()?.replace(/\.md$/, "") ?? "project";
-
-const isProjectLink = (value: unknown): value is ProjectLink =>
-  typeof value === "object" &&
-  value !== null &&
-  "text" in value &&
-  "url" in value;
-
-const parseProject = (path: string, raw: string): Project => {
-  const { data, content } = parseFrontmatter(raw);
-
-  return {
-    slug: toSlug(path),
-    title: String(data.title),
-    description: String(data.description),
-    category: String(data.category),
-    metrics: String(data.metrics),
-    tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
-    pubDate: toIsoDate(data.pubDate),
-    featured: Boolean(data.featured),
-    order: Number(data.order ?? 0),
-    thumbnail: typeof data.thumbnail === "string" ? data.thumbnail : undefined,
-    links: Array.isArray(data.links) && data.links.every(isProjectLink)
-      ? data.links.map((link) => ({
-          text: String(link.text),
-          url: String(link.url),
-        }))
-      : undefined,
-    body: content.trim(),
-  };
-};
+const stripFrontmatter = (raw: string) =>
+  raw.replace(/^---\s*[\s\S]*?\s*---\s*/, "").trim();
 
 export const hero = heroContent as HeroContent;
 export const skills = skillsContent as SkillsContent;
@@ -302,13 +172,14 @@ export const experience = experienceContent as ExperienceContent;
 export const education = educationContent as EducationContent;
 export const certifications = certificationsContent as CertificationsContent;
 export const siteSettings = settingsContent as SiteSettings;
+export const mediumFeed = mediumContent as MediumFeedContent;
 
-export const projects = Object.entries(projectModules)
-  .map(([path, raw]) => parseProject(path, raw))
-  .sort(
-    (first, second) =>
-      new Date(second.pubDate).getTime() - new Date(first.pubDate).getTime(),
-  );
+export const projects = (projectContent.entries as ProjectSummary[]).toSorted(
+  (first, second) =>
+    new Date(second.pubDate).getTime() - new Date(first.pubDate).getTime(),
+);
+
+const projectIndex = new Map(projects.map((project) => [project.slug, project]));
 
 export const featuredProjects = [...projects]
   .filter((project) => project.featured)
@@ -318,3 +189,42 @@ export const projectCategories = [
   "All",
   ...new Set(projects.map((project) => project.category)),
 ];
+
+export const getSocialLinkByIcon = (icon: string) =>
+  siteSettings.socials.find((social) => social.icon === icon);
+
+export const loadProjectBody = (slug: string) => {
+  const cachedBody = projectBodyCache.get(slug);
+
+  if (cachedBody) {
+    return cachedBody;
+  }
+
+  const loader = projectBodyModules[`../content/projects/${slug}.md`];
+
+  if (!loader) {
+    return Promise.reject(new Error(`No project body found for "${slug}".`));
+  }
+
+  // Keep project markdown out of the first bundle and cache it after the first open.
+  const bodyPromise = loader().then(stripFrontmatter);
+
+  projectBodyCache.set(slug, bodyPromise);
+
+  return bodyPromise;
+};
+
+export const loadProject = async (slug: string): Promise<Project> => {
+  const project = projectIndex.get(slug);
+
+  if (!project) {
+    throw new Error(`No project metadata found for "${slug}".`);
+  }
+
+  const body = await loadProjectBody(slug);
+
+  return {
+    ...project,
+    body,
+  };
+};

@@ -1,17 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import type { Project } from "../data/content";
+import { loadProjectBody, type ProjectSummary } from "../data/content";
 
 interface ProjectModalProps {
-  project: Project;
+  project: ProjectSummary;
   open: boolean;
   onClose: () => void;
 }
 
 export function ProjectModal({ project, open, onClose }: ProjectModalProps) {
+  const [body, setBody] = useState("");
+  const [loadError, setLoadError] = useState<string | null>(null);
+
   useEffect(() => {
     if (!open) {
       return undefined;
@@ -33,6 +36,34 @@ export function ProjectModal({ project, open, onClose }: ProjectModalProps) {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [onClose, open]);
+
+  useEffect(() => {
+    if (!open) {
+      return undefined;
+    }
+
+    let cancelled = false;
+
+    void loadProjectBody(project.slug)
+      .then((nextBody) => {
+        if (!cancelled) {
+          setBody(nextBody);
+        }
+      })
+      .catch((error: unknown) => {
+        if (!cancelled) {
+          setLoadError(
+            error instanceof Error
+              ? error.message
+              : "Unable to load this project right now.",
+          );
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [open, project.slug]);
 
   if (!open) {
     return null;
@@ -84,10 +115,21 @@ export function ProjectModal({ project, open, onClose }: ProjectModalProps) {
             ) : null}
           </header>
 
-          <article className="markdown-prose">
-            <p className="markdown-prose__lead">{project.description}</p>
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.body}</ReactMarkdown>
-          </article>
+          {loadError ? (
+            <div className="project-modal__state" role="alert">
+              <p>{loadError}</p>
+            </div>
+          ) : body ? (
+            <article className="markdown-prose">
+              <p className="markdown-prose__lead">{project.description}</p>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
+            </article>
+          ) : (
+            <div className="project-modal__state" role="status" aria-live="polite">
+              <span className="project-modal__loading-spinner" aria-hidden="true" />
+              <p>Loading project details…</p>
+            </div>
+          )}
         </div>
       </div>
     </div>,

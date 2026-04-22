@@ -1,10 +1,24 @@
-import { useState } from "react";
+import { Suspense, lazy, useState } from "react";
 
-import type { Project } from "../data/content";
-import { ProjectModal } from "./ProjectModal";
+import type { ProjectSummary } from "../data/content";
+
+const ProjectModal = lazy(async () => ({
+  default: (await import("./ProjectModal")).ProjectModal,
+}));
 
 interface ProjectCardProps {
-  project: Project;
+  project: ProjectSummary;
+}
+
+function ProjectModalFallback() {
+  return (
+    <div className="project-modal project-modal--loading" role="status" aria-live="polite">
+      <div className="project-modal__loading-panel">
+        <span className="project-modal__loading-spinner" aria-hidden="true" />
+        <span>Loading case study…</span>
+      </div>
+    </div>
+  );
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
@@ -20,7 +34,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
           aria-label={`Open ${project.title} details`}
         >
           {project.thumbnail ? (
-            <img src={project.thumbnail} alt={`${project.title} project preview`} />
+            <img
+              src={project.thumbnail}
+              alt={`${project.title} project preview`}
+              loading="lazy"
+              decoding="async"
+            />
           ) : (
             <div className="project-card__placeholder">
               <span className="project-card__placeholder-label">{project.category}</span>
@@ -48,7 +67,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <p className="project-card__description">{project.description}</p>
       </article>
 
-      <ProjectModal project={project} open={open} onClose={() => setOpen(false)} />
+      {open ? (
+        <Suspense fallback={<ProjectModalFallback />}>
+          <ProjectModal project={project} open={open} onClose={() => setOpen(false)} />
+        </Suspense>
+      ) : null}
     </>
   );
 }

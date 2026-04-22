@@ -30,11 +30,9 @@ export function AboutPage() {
                     <strong>{siteSettings.location}</strong>
                   </div>
                   <div className="about-intro__profile-item">
-                    <a 
-                      href={`mailto:${siteSettings.email}?subject=Interest%20in%20Hiring%20You`} 
-                      target="_blank" 
-                      rel="noreferrer"
-                      style={{color: 'var(--primary)' }}
+                    <a
+                      href={siteSettings.contactMeLink}
+                      style={{ color: "var(--primary)" }}
                     >
                       Hire Me
                     </a>
