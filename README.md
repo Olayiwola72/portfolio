@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# Olayiwola Akinnagbe — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website showcasing my work as a Senior Backend Engineer specializing in fintech infrastructure, distributed systems, and API-first architecture.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend**: React 19, TypeScript, Vite
+- **Routing**: React Router v7
+- **Styling**: SCSS with custom design tokens
+- **Fonts**: Geist (Variable)
+- **Icons**: React Icons (Feather)
+- **Markdown**: react-markdown with remark-gfm
+- **RSS Parsing**: rss-parser (for Medium blog feed)
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/       # Reusable UI components
+├── pages/            # Route pages (Home, About, Projects, NotFound)
+├── content/          # JSON content files organized by section
+│   ├── hero/
+│   ├── about/
+│   ├── experience/
+│   ├── projects/
+│   ├── skills/
+│   ├── education/
+│   ├── certifications/
+│   ├── medium/
+│   └── settings/
+├── hooks/            # Custom React hooks
+├── context/          # React context (theme)
+├── styles/           # SCSS modules and tokens
+├── data/             # Data utilities
+└── config/           # Configuration files
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Install dependencies
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
+npm run lint
 ```
+
+## Content Management
+
+All portfolio content is stored as JSON in `src/content/`. To update:
+
+- **Hero**: `src/content/hero/main.json`
+- **About**: `src/content/about/main.json`
+- **Experience**: `src/content/experience/main.json`
+- **Projects**: `src/content/projects/main.json`
+- **Skills**: `src/content/skills/main.json`
+- **Education**: `src/content/education/main.json`
+
+## Features
+
+- Dark/Light theme toggle
+- Responsive design
+- Animated counters and transitions
+- Project filtering by category
+- Medium blog feed integration
+- PDF CV download
+- Impact statistics showcase
+- Timeline-based experience display
+
+## Connect
+
+- **GitHub**: https://github.com/Olayiwola72
+- **LinkedIn**: https://www.linkedin.com/in/olayiwola-akinnagbe/
+- **Twitter**: https://twitter.com/OlayiwolaAkinn1
+- **Portfolio**: https://olayiwola-akinnagbe.netlify.app/
+- **Resume**: https://drive.google.com/file/d/10Eo_1hJi5EEXSOfAdAJCA14eIY5MbMMI/view
+
+---
+
+## License
+
+MIT
