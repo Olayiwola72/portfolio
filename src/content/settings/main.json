@@ -48,7 +48,7 @@
     }
   ],
   "seo": {
-    "ogImage": "/og-default.png",
+    "ogImage": "/assets/images/banner.png",
     "keywords": [
       "Senior Backend Engineer",
       "Java",

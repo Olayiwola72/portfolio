@@ -1261,7 +1261,7 @@
 .about-intro {
   display: grid;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
   margin-bottom: 6rem;
 
   @include respond(lg) {
@@ -1280,7 +1280,7 @@
   background: var(--muted);
   overflow: hidden;
 
-  img {
+  img:not(.about-intro__avatar) {
     width: 80%;
     height: 80%;
     object-fit: cover;
@@ -1312,11 +1312,13 @@
 .about-intro__image-glow {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: linear-gradient(
     145deg,
     color-mix(in srgb, var(--primary) 20%, transparent),
     color-mix(in srgb, var(--secondary) 10%, transparent)
   );
+  pointer-events: none;
 }
 
 .about-intro__visual::after {
@@ -1403,11 +1405,14 @@
 }
 
 .about-intro__avatar {
+  position: relative;
+  z-index: 1;
   align-self: flex-start;
-  width: 4.25rem;
-  height: 4.25rem;
+  width: clamp(20rem, 24vw, 11.5rem);
+  max-width: 100%;
+  height: auto;
   border: 1px solid color-mix(in srgb, var(--primary) 25%, var(--border));
-  border-radius: 1.25rem;
+  border-radius: var(--radius-xl);
   background: color-mix(in srgb, var(--background) 86%, transparent);
   box-shadow: var(--shadow);
   object-fit: cover;
