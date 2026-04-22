@@ -8,22 +8,40 @@ interface PageMetaProps {
   description?: string;
 }
 
-const setMetaTag = (selector: string, value: string) => {
-  const element = document.head.querySelector<HTMLMetaElement>(selector);
+type MetaKey = { name: string } | { property: string };
 
-  if (element) {
-    element.content = value;
+const getMetaSelector = (key: MetaKey) =>
+  "name" in key ? `meta[name="${key.name}"]` : `meta[property="${key.property}"]`;
+
+const upsertMetaTag = (key: MetaKey, value: string) => {
+  const selector = getMetaSelector(key);
+  let element = document.head.querySelector<HTMLMetaElement>(selector);
+
+  if (!element) {
+    element = document.createElement("meta");
+
+    if ("name" in key) {
+      element.name = key.name;
+    } else {
+      element.setAttribute("property", key.property);
+    }
+
+    document.head.appendChild(element);
   }
+
+  element.content = value;
 };
 
-const setCanonicalLink = (href: string) => {
-  const element = document.head.querySelector<HTMLLinkElement>(
-    'link[rel="canonical"]',
-  );
+const upsertLink = (rel: string, href: string) => {
+  let element = document.head.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`);
 
-  if (element) {
-    element.href = href;
+  if (!element) {
+    element = document.createElement("link");
+    element.rel = rel;
+    document.head.appendChild(element);
   }
+
+  element.href = href;
 };
 
 export function PageMeta({ title, description }: PageMetaProps) {
@@ -37,15 +55,15 @@ export function PageMeta({ title, description }: PageMetaProps) {
 
     document.title = resolvedTitle;
 
-    setMetaTag('meta[name="title"]', resolvedTitle);
-    setMetaTag('meta[name="description"]', resolvedDescription);
-    setMetaTag('meta[property="og:title"]', resolvedTitle);
-    setMetaTag('meta[property="og:description"]', resolvedDescription);
-    setMetaTag('meta[property="og:image"]', imageUrl.toString());
-    setMetaTag('meta[property="twitter:title"]', resolvedTitle);
-    setMetaTag('meta[property="twitter:description"]', resolvedDescription);
-    setMetaTag('meta[property="twitter:image"]', imageUrl.toString());
-    setCanonicalLink(currentUrl.toString());
+    upsertMetaTag({ name: "title" }, resolvedTitle);
+    upsertMetaTag({ name: "description" }, resolvedDescription);
+    upsertMetaTag({ property: "og:title" }, resolvedTitle);
+    upsertMetaTag({ property: "og:description" }, resolvedDescription);
+    upsertMetaTag({ property: "og:image" }, imageUrl.toString());
+    upsertMetaTag({ property: "twitter:title" }, resolvedTitle);
+    upsertMetaTag({ property: "twitter:description" }, resolvedDescription);
+    upsertMetaTag({ property: "twitter:image" }, imageUrl.toString());
+    upsertLink("canonical", currentUrl.toString());
   }, [description, location.pathname, title]);
 
   return null;

@@ -9,7 +9,7 @@ export function AboutPage() {
     <>
       <PageMeta
         title={`About | ${siteSettings.personName}`}
-        description="Learn more about Olayiwola Akinnagbe, a senior backend engineer focused on scalable fintech APIs, event-driven systems, and cloud delivery."
+        description={`Learn more about ${siteSettings.personName}, a senior backend engineer focused on scalable fintech APIs, event-driven systems, and cloud delivery.`}
       />
       
       <section className="internal-page">

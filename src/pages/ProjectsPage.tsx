@@ -3,7 +3,7 @@ import { useState } from "react";
 import { PageMeta } from "../components/PageMeta";
 import { ProjectCard } from "../components/ProjectCard";
 import { ProjectFilters } from "../components/ProjectFilters";
-import { projectCategories, projects } from "../data/content";
+import { projectCategories, projects, siteSettings } from "../data/content";
 
 export function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -17,7 +17,7 @@ export function ProjectsPage() {
   return (
     <>
       <PageMeta
-        title="Projects | Olayiwola Akinnagbe"
+        title={`Projects | ${siteSettings.personName}`}
         description="Explore backend case studies covering fintech APIs, event-driven services, search optimization, cloud deployment, and full-stack product delivery."
       />
 

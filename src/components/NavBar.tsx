@@ -4,13 +4,8 @@ import type { IconType } from "react-icons";
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
+import { navigationItems } from "../config/navigation";
 import { getSocialLinkByIcon, siteSettings } from "../data/content";
-
-const navigationItems = [
-  { label: "Home", to: "/" },
-  { label: "Projects", to: "/projects" },
-  { label: "About", to: "/about" },
-];
 
 const iconLinks: Array<{ icon: string; label: string; Icon: IconType }> = [
   { icon: "linkedin", label: "LinkedIn", Icon: FaLinkedinIn },

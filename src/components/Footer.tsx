@@ -1,13 +1,8 @@
 import { Link } from "react-router-dom";
 
+import { navigationItems } from "../config/navigation";
 import { siteSettings } from "../data/content";
 import { BrandMark } from "./BrandMark";
-
-const footerNavigation = [
-  { label: "Home", to: "/" },
-  { label: "Projects", to: "/projects" },
-  { label: "About", to: "/about" },
-];
 
 export function Footer() {
   return (
@@ -24,7 +19,7 @@ export function Footer() {
           <div>
             <h4 className="site-footer__heading">Navigation</h4>
             <ul className="site-footer__list">
-              {footerNavigation.map((link) => (
+              {navigationItems.map((link) => (
                 <li key={link.to}>
                   <Link className="site-footer__link" to={link.to}>
                     {link.label}

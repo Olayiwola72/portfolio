@@ -99,6 +99,14 @@ const writeFeedFile = async (content) => {
   await writeFile(outputPath, `${JSON.stringify(content, null, 2)}\n`, "utf8");
 };
 
+const readExistingFeedFile = async () => {
+  try {
+    return JSON.parse(await readFile(outputPath, "utf8"));
+  } catch {
+    return null;
+  }
+};
+
 const settings = JSON.parse(await readFile(settingsPath, "utf8"));
 const sourceUrl = settings.mediumFeedUrl;
 
@@ -126,6 +134,16 @@ try {
     readingTimeMinutes: estimateReadingTimeMinutes(item),
     thumbnail: extractThumbnail(item),
   }));
+
+  const existingFeed = await readExistingFeedFile();
+
+  if (
+    existingFeed?.sourceUrl === sourceUrl &&
+    Array.isArray(existingFeed.articles) &&
+    JSON.stringify(existingFeed.articles) === JSON.stringify(articles)
+  ) {
+    process.exit(0);
+  }
 
   await writeFeedFile({
     generatedAt: new Date().toISOString(),

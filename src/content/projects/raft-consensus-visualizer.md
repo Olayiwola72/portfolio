@@ -1,20 +1,3 @@
----
-title: "Raft Consensus Visualizer"
-description: "A polished, deterministic in-browser simulation for studying Raft leader election, quorum, heartbeats, log replication, and failure recovery through an interactive UI."
-category: "Distributed Systems"
-metrics: "Deterministic Raft simulation"
-tags: ["React", "TypeScript", "Vite", "SCSS", "Distributed Systems", "Raft"]
-pubDate: 2026-04-10
-featured: true
-order: 1
-thumbnail: "https://raw.githubusercontent.com/Olayiwola72/raft-consensus-visualizer/main/docs/media/app-preview.png"
-links:
-  - text: "Live Demo"
-    url: "https://raft-consensus-visualizer.netlify.app/"
-  - text: "Repository"
-    url: "https://github.com/Olayiwola72/raft-consensus-visualizer"
----
-
 ## Overview
 Raft can feel abstract when it is described only in text. This project turns the algorithm into a product-quality visual system design tool so you can inspect cluster behavior tick by tick, introduce failures, and watch recovery play out.
 

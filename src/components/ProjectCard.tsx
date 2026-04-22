@@ -1,10 +1,12 @@
 import { Suspense, lazy, useState } from "react";
 
-import type { ProjectSummary } from "../data/content";
+import { loadProjectBody, type ProjectSummary } from "../data/content";
 
 const ProjectModal = lazy(async () => ({
   default: (await import("./ProjectModal")).ProjectModal,
 }));
+
+const preloadProjectModal = () => import("./ProjectModal");
 
 interface ProjectCardProps {
   project: ProjectSummary;
@@ -24,6 +26,11 @@ function ProjectModalFallback() {
 export function ProjectCard({ project }: ProjectCardProps) {
   const [open, setOpen] = useState(false);
 
+  const prefetchDetails = () => {
+    void loadProjectBody(project.slug).catch(() => undefined);
+    void preloadProjectModal();
+  };
+
   return (
     <>
       <article className="project-card">
@@ -31,6 +38,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
           type="button"
           className="project-card__media"
           onClick={() => setOpen(true)}
+          onPointerEnter={prefetchDetails}
+          onPointerDown={prefetchDetails}
+          onFocus={prefetchDetails}
           aria-label={`Open ${project.title} details`}
         >
           {project.thumbnail ? (
@@ -61,6 +71,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
           type="button"
           className="project-card__title"
           onClick={() => setOpen(true)}
+          onPointerEnter={prefetchDetails}
+          onPointerDown={prefetchDetails}
+          onFocus={prefetchDetails}
         >
           {project.title}
         </button>
